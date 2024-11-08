@@ -20,11 +20,11 @@ int intConvTo() { // task1
 	return 0;
 }
 
-int weightPhoto() {
+/*int weightPhoto() {
 	int weight;
 	int weidht;
 	int lenhgt
-}
+}*/
 
 int maskIP() { //task3
 	setlocale(LC_ALL, "RU");
