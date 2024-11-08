@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-int intConvcTo() { // task1
+int intConvTo() { // task1
 
 	setlocale(LC_ALL, "RU");
 	int chislo, ss1, ss2;
@@ -59,6 +59,12 @@ int main()
 {
 	cout << "Что вы хотите выбрать: Конвертация, Маска, вес, таблицаИст";
 	string command; cin >> command;
+	if(command == "Конвертация"){
+		intConvTo();
+	}
+	else if(command=="Маска"){
+		maskIP();
+	}
 	//intConvcTo();
 	//maskIP();
 }
