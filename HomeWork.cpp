@@ -2,6 +2,7 @@
 #include <cmath>
 #include <fstream>
 #include <string>
+#include <cstdbool>
 using namespace std;
 
 int intConvTo() { // task1
@@ -41,7 +42,7 @@ int FileWeight() /*task3*/ {
 		cout << "Введите глубину цвета: "; cin >> colorDepth;
 		cout << "Число кадров в сек: "; cin >> fps;
 		cout << "Введите длительность видео в сек: "; cin >> Time;
-		I = (resolutionH*resolutionW * (colorDepth / 8) * fps * Time);
+		I = (resolutionH * resolutionW * (colorDepth / 8) * fps * Time);
 		I /= 1073741824;
 		cout << "Размер видео равен " << I << "Гбайт";
 	}
@@ -80,6 +81,20 @@ int maskIP() { //task3
 	return 0;
 }
 
+bool Truth_Table() {
+	int REsult;
+		for ( int A = 0; A <= 1; A++) {
+			for (int B= 0; B <= 1; B++) {
+				for (int C = 0; C <= 1; C++) {
+					REsult = A || B & C;
+					cout << "|" << "A" << "|" << "B" << "|" << "C" << "|" << "ABC" << "|" << endl;
+					cout << "|" << A << "|" << B << "|" << C << "|" << REsult << "|" << endl;
+				}
+			}
+		}
+		return 0;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "RU");
@@ -93,6 +108,9 @@ int main()
 	}
 	else if (command == "File_Weight") {
 		FileWeight();
+	}
+	else if (command == "Truth_Table") {
+		Truth_Table();
 	}
 	else {
 		cout << "Команда введена не верно." << endl;
