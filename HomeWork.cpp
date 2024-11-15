@@ -114,6 +114,5 @@ int main()
 	}
 	else {
 		cout << "Команда введена не верно." << endl;
-	}
-	FileWeight();
+	}
 }
